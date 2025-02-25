@@ -27,7 +27,7 @@
             "id": "exp-1",
             "company": "Liberty Mutual Insurance",
             "position": "Senior Analyst, Advanced Analytics",
-            "duration": "2024 - Present | Seattle",
+            "duration": "2023 - Present | Seattle",
             "description": [
                 "Developed an SQL-based policy identifier using CTE and Snowflake Passthrough, reducing errors by 40% and saving $150K annually.",
                 "Conducted churn analysis leveraging customer behavior data, identifying retention drivers that led to a 12% increase in customer lifetime value (CLTV).",
