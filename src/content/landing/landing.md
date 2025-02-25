@@ -1,10 +1,10 @@
-Welcome 👋 I'm a _Frontend Software Engineer_ at [Reputation](https://reputation.com/) based out of Chicago, Illinois. I recently graduated from Indiana University with a Masters degree in Computer Science and I'm passionate about **Software Development**, **UX Design** and **Artificial Intelligence**.
+Welcome 👋 I'm Aditya Jit Singh, a Senior Analyst in the Insights and Solutions team at Liberty Mutual, specializing in data analytics, business insights, and strategy. I have a Master's in Business Analytics from Babson College and a passion for leveraging data-driven insights to optimize business performance and decision-making.
 
 I'm currently working with,
 
--   React (TS)
--   NodeJS
--   Flask (Python)
--   HTML/SCSS
--   WebSockets
--   GraphQL
+-   Tableau
+-   SQL
+-   Python
+-   R
+-   PowerBI
+

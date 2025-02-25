@@ -2,111 +2,91 @@
     "educations": [
         {
             "id": "edu-1",
-            "school": "Indiana University",
-            "degree": "Master of Science in Computer Science",
-            "duration": "Aug 2019 - May 2021",
+            "school": "Babson College",
+            "degree": "Master of Science in Business Analytics & Entrepreneurship",
+            "duration": "Aug 2021 - Dec 2022",
             "content": [
-                "GPA: 4/4",
-                "Courses: Software Engineering, Distributed Systems, Operating Systems, Advanced Algorithms, Experience Design"
+                "Major: Business Analytics",
+                "Focus Areas: Data Analytics, Business Strategy, Financial Modeling",
+                "Courses: Data Mining, Predictive Analytics, Financial Modeling, Marketing Analytics, Business Strategy"
             ]
         },
         {
             "id": "edu-2",
-            "school": "Manipal University",
-            "degree": "Bachelors in Computer Engineering",
+            "school": "Amity University",
+            "degree": "Bachelor of International Business and Finance",
             "duration": "Aug 2015 - Jul 2019",
             "content": [
-                "GPA: 8/10",
-                "Courses: Data Structures, OOP, Algorithms, Software Engineering, Computer Networks, Artificial Intelligence"
+                "First Class Honors",
+                "Focus: International Business and Finance"
             ]
         }
     ],
     "experiences": [
         {
             "id": "exp-1",
-            "company": "Reputation",
-            "position": "Software Engineer (Frontend)",
-            "duration": "Jun 2020 - Jun 2021",
+            "company": "Liberty Mutual Insurance",
+            "position": "Senior Analyst, Advanced Analytics",
+            "duration": "2024 - Present | Seattle",
             "description": [
-                "Revamping the current report generation framework using React, that aggregates data from 30 modules to support an interactive cartesian system.​",
-                "Integrated user activity data from BigQuery into a custom tailored dashboard available to 10000+ clients.",
-                "Spearheaded the work on multiple reports for 5 priority clients to provide additional functionalities."
+                "Developed an SQL-based policy identifier using CTE and Snowflake Passthrough, reducing errors by 40% and saving $150K annually.",
+                "Conducted churn analysis leveraging customer behavior data, identifying retention drivers that led to a 12% increase in customer lifetime value (CLTV).",
+                "Led Root Cause Analysis with Underwriting stakeholders, optimizing Smart Start partnership levers and improving Loss Ratio by 18%, saving $1.2M annually.",
+                "Enhanced Power BI dashboards to track key marketing performance indicators, improving decision-making for leadership."
             ]
         },
         {
             "id": "exp-2",
-            "company": "CNS (NIH), Indiana University",
-            "position": "Software Engineer",
-            "duration": "Jun 2020 - Jun 2021",
+            "company": "LocoNav",
+            "position": "Senior Product Analyst - Global Growth",
+            "duration": "2020 - 2021 | New Delhi, India",
             "description": [
-                "Developed state of the art visualization tools for researchers and doctors to envision large biological datasets using ​Angular 11​, Node & Vega.​",
-                "Devised an algorithm to compute statistics that highlight anomalies in the data and displayed them on an intuitive interface.",
-                "Created detailed UX flows, experience maps, wire-frames and conducted interviews across various biological consortia to enhance user experience."
+                "Facilitated A/B testing to optimize driver onboarding, increasing driver engagement by 34%.",
+                "Analyzed user behavior and feature adoption patterns to enhance platform stickiness, driving a 20% increase in active user retention.",
+                "Partnered with Product Managers to size and scope product feature enhancements, aligning data insights with product roadmap decisions."
             ]
         },
         {
             "id": "exp-3",
-            "company": "Skylark Drones",
-            "position": "Software Engineer Intern",
-            "duration": "Jan 2019 - Jun 2019",
+            "company": "LimeTray",
+            "position": "Sales Strategy Operations Manager",
+            "duration": "2018 - 2020 | New Delhi, India",
             "description": [
-                "Developed a web app for mission planning, control and execution using Vue & Flask, thereby improving onside project performance by 22%.​",
-                "Designed an icon set for various functionalities using ​Illustrator​, which improved usability by 20%."
+                "Analyzed sales pipeline efficiency to identify bottlenecks, optimizing lead allocation strategies and reducing deal closure time by 20%.",
+                "Developed and implemented sales performance dashboards, driving a 15% increase in sales productivity."
             ]
         }
     ],
     "skills": [
         {
-            "title": "Programming",
+            "title": "Programming & Analytics",
             "tools": [
-                "TypeScript",
-                "JavaScript",
-                "Python",
-                "C/C++",
-                "Java",
-                "NoSQL",
                 "SQL",
-                "Shell",
-                "React Native",
-                "Vega (D3.js)"
+                "Python",
+                "Tableau",
+                "Power BI",
+                "A/B Testing",
+                "Data Visualization",
+                "Predictive Analytics"
             ]
         },
         {
-            "title": "Web",
-            "tools": ["React", "Angular 11", "Vue", "NodeJS", "Flask", "Redux", "NGXS", "HTML/CSS", "OAuth", "i18n"]
-        },
-        {
-            "title": "Databases",
-            "tools": ["MongoDB", "Redis", "MySQL", "Firebase"]
-        },
-
-        {
-            "title": "OS & Tools",
-            "tools": ["MacOS", "Linux", "Git", "Agile (Scrum)", "MVC", "Jenkins", "Heroku", "Docker", "Kubernetes"]
-        },
-        {
-            "title": "Design & Research",
+            "title": "Business & Strategy",
             "tools": [
-                "Surveys",
-                "Interviews",
-                "User Research",
-                "Design Strategy",
-                "Experience Mapping",
-                "Adobe XD",
-                "Illustrator"
+                "Customer Segmentation",
+                "Financial Modeling",
+                "Marketing Analytics",
+                "Product Optimization",
+                "Growth Strategy"
             ]
         }
     ],
     "blog": [
         {
             "id": "blog-1",
-            "title": "A beginner's guide to github",
-            "link": "https://hrishikeshpaul12.medium.com/a-beginners-guide-to-github-a811e662a777"
-        },
-        {
-            "id": "blog-2",
-            "title": "User Experience Design – A little more than just design",
-            "link": "https://hrishikeshpaul12.medium.com/user-experience-design-a-little-more-than-just-design-afdb941aeb5"
+            "title": "The Economic Impact of a Potential TikTok Ban",
+            "link": "https://www.linkedin.com/feed/update/urn:li:activity:7286869549931474944/"
         }
-    ]
+    ],
+    "resume": "https://drive.google.com/file/d/111Ae_8caSu5dh_VLQYVPuoc6_d2n2SuA/view?usp=sharing"
 }
