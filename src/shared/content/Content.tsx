@@ -9,8 +9,7 @@ import featuredProjects from "content/featured-projects/featured-projects-config
 import otherProjects from "content/other-projects/other-projects-config.json";
 import about from "content/about/about-config.json";
 
-import LandingMd from "content/landing/landing.md";
-import AboutMd from "content/about/about.md";
+
 
 export const configs = {
     common,
@@ -31,8 +30,8 @@ export enum MarkdownFile {
 }
 
 const Mapper = {
-    [MarkdownFile.Landing]: LandingMd,
-    [MarkdownFile.About]: AboutMd,
+    [MarkdownFile.Landing]: process.env.PUBLIC_URL + '/landing.md',
+    [MarkdownFile.About]: process.env.PUBLIC_URL + '/about.md',
 };
 
 export const useContent = (fileName: MarkdownFile) => {
@@ -61,11 +60,11 @@ export const Content: FC<Props> = ({ children, ...rest }) => {
                         <Link href={props.href} target="_blank" color="primary.200" {...props} />
                     ),
                     ul: ({ node, ...props }) => {
-                        const { ordered, ...rest } = props;
+                        const { ordered, ...ulProps } = props;
 
                         return (
                             <UnorderedList
-                                {...rest}
+                                {...ulProps}
                                 data-aos="fade"
                                 listStylePosition="inside"
                                 display="grid"
