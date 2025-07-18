@@ -40,8 +40,22 @@ export const useContent = (fileName: MarkdownFile) => {
 
     useEffect(() => {
         fetch(Mapper[fileName])
-            .then((res) => res.text())
-            .then((text) => setData((data) => ({ ...data, [fileName]: text })));
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error(`Failed to fetch ${fileName}: ${res.status}`);
+                }
+                return res.text();
+            })
+            .then((text) => setData((data) => ({ ...data, [fileName]: text })))
+            .catch((error) => {
+                console.error(`Error loading ${fileName}:`, error);
+                // Fallback content for Safari compatibility
+                if (fileName === MarkdownFile.Landing) {
+                    setData((prevData) => ({ ...prevData, landing: "Welcome! I'm Aditya Singh, a Senior Analyst at Liberty Mutual." }));
+                } else if (fileName === MarkdownFile.About) {
+                    setData((prevData) => ({ ...prevData, about: "Hi there! Nice to meet you! I'm Aditya Jit Singh." }));
+                }
+            });
     }, [fileName]);
 
     return data;
@@ -69,7 +83,10 @@ export const Content: FC<Props> = ({ children, ...rest }) => {
                                 data-aos="fade"
                                 listStylePosition="inside"
                                 display="grid"
-                                gridTemplateColumns="repeat(2, 1fr)"
+                                style={{
+                                    gridTemplateColumns: "repeat(2, 1fr)",
+                                    gap: "8px"
+                                }}
                                 listStyleType="'‣ '"
                                 fontWeight="600"
                             />

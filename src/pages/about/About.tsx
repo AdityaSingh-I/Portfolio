@@ -13,8 +13,24 @@ export const About: FC = () => {
     const content = useContent(MarkdownFile.About);
 
     const onPlay = () => {
-        const audio = new Audio(configs.common.audioFile);
-        audio.play();
+        try {
+            const audio = new Audio(configs.common.audioFile);
+            // Safari requires user interaction before playing audio
+            const playPromise = audio.play();
+            
+            if (playPromise !== undefined) {
+                playPromise
+                    .then(() => {
+                        // Audio played successfully
+                    })
+                    .catch((error) => {
+                        console.log("Audio playback failed:", error);
+                        // Fallback: Could show a message to user
+                    });
+            }
+        } catch (error) {
+            console.log("Audio initialization failed:", error);
+        }
     };
 
     return (

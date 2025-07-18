@@ -8,6 +8,8 @@ html,
 body,
 #root {
   height: 100%;
+  /* Fallback cursor for Safari compatibility */
+  cursor: auto !important;
   cursor: url(./utils/assets/cursor.svg) 20 20, auto !important;
 
   *::selection {
