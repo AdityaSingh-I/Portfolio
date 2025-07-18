@@ -8,13 +8,14 @@ import { Education } from "pages/about/education/Education";
 import { Experience } from "pages/about/experience/Experience";
 import { Skills } from "pages/about/skills/Skills";
 import { VolumeIcon } from "utils/Icons";
+import { resolveAssetPath } from "utils/Functions";
 
 export const About: FC = () => {
     const content = useContent(MarkdownFile.About);
 
     const onPlay = () => {
         try {
-            const audio = new Audio(configs.common.audioFile);
+            const audio = new Audio(resolveAssetPath(configs.common.audioFile));
             // Safari requires user interaction before playing audio
             const playPromise = audio.play();
             
@@ -38,9 +39,9 @@ export const About: FC = () => {
             <Flex pt="8" gap={{ base: 6, md: 6, lg: 12 }} direction={{ base: "column", md: "row" }}>
                 <Box flex="0.35" data-aos="fade-up">
                     <picture>
-                        <source type="image/webp" srcSet={configs.common.mainPicture}></source>
-                        <source type="image/jpeg" srcSet={configs.common.mainPictureJPG}></source>
-                        <Image borderRadius="xl" src={configs.common.mainPicture} w="100%" alt="profile image" />
+                        <source type="image/webp" srcSet={resolveAssetPath(configs.common.mainPicture)}></source>
+                        <source type="image/jpeg" srcSet={resolveAssetPath(configs.common.mainPictureJPG)}></source>
+                        <Image borderRadius="xl" src={resolveAssetPath(configs.common.mainPicture)} w="100%" alt="profile image" />
                     </picture>
                 </Box>
                 <Box flex="0.85">

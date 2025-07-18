@@ -3,6 +3,7 @@ import { FC } from "react";
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { Tags } from "shared/tags/Tags";
 import { ProjectCardFooter } from "shared/project-card-footer/ProjectCardFooter";
+import { resolveAssetPath } from "utils/Functions";
 
 export enum ImagePosition {
     Right,
@@ -90,7 +91,7 @@ export const FeaturedProjectCard: FC<Props> = ({
                         data-aos-offset="200"
                         data-aos-delay="200"
                     >
-                        <Image borderRadius="xl" src={image} />
+                        <Image borderRadius="xl" src={resolveAssetPath(image)} />
                     </Box>
 
                     <Text
@@ -120,11 +121,11 @@ export const FeaturedProjectCard: FC<Props> = ({
                 pr={{ base: "0", lg: ImagePositionPaddingLeftMapper[imagePosition] }}
             >
                 <picture>
-                    <source type="image/webp" srcSet={image}></source>
-                    <source type="image/jpeg" srcSet={jpg}></source>
+                    <source type="image/webp" srcSet={resolveAssetPath(image)}></source>
+                    <source type="image/jpeg" srcSet={resolveAssetPath(jpg)}></source>
                     <Image
                         borderRadius="xl"
-                        src={jpg}
+                        src={resolveAssetPath(jpg)}
                         alt={`${title}-cover-image`}
                         transition="all 0.4s ease-in-out"
                         _hover={{ boxShadow: "0px 20px 60px rgb(77 77 77 / 10%)", transform: "scale(1.01)" }}

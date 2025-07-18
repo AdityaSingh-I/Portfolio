@@ -6,6 +6,7 @@ import { Content, configs, useContent, MarkdownFile } from "shared/content/Conte
 import { Socials } from "shared/socials/Socials";
 import { WorkPageId } from "utils/useScroll";
 import { ChevronDownIcon } from "utils/Icons";
+import { resolveAssetPath } from "utils/Functions";
 
 export const Landing: FC = () => {
     const content = useContent(MarkdownFile.Landing);
@@ -47,9 +48,9 @@ export const Landing: FC = () => {
                         data-aos-delay="400"
                     >
                         <picture>
-                            <source type="image/webp" src={configs.landing.picture}></source>
-                            <source type="image/jpeg" src={configs.landing.jpg}></source>
-                            <Image borderRadius="xl" src={configs.landing.jpg} alt={`face-cover-image`} />
+                            <source type="image/webp" src={resolveAssetPath(configs.landing.picture)}></source>
+                            <source type="image/jpeg" src={resolveAssetPath(configs.landing.jpg)}></source>
+                            <Image borderRadius="xl" src={resolveAssetPath(configs.landing.jpg)} alt={`face-cover-image`} />
                         </picture>
                     </Container>
                 </HStack>

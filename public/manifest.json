@@ -1,9 +1,9 @@
 {
-    "short_name": "HP",
-    "name": "Portfolio • Hrishikesh Paul",
+    "short_name": "AJS",
+    "name": "Portfolio • Aditya Jit Singh",
     "icons": [
         {
-            "src": "logo.png",
+            "src": "assets/AdiLogo.png",
             "type": "image/png",
             "sizes": "512x512"
         }
