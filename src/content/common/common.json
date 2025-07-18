@@ -4,10 +4,10 @@
         "mobile": "AS",
         "desktop": "Aditya Singh"
     },
-    "mainPicture": "/assets/AdityaToff.webp",
-    "mainPictureJPG": "/assets/AdityaToff.jpg",
+    "mainPicture": "assets/AdityaToff.webp",
+    "mainPictureJPG": "assets/AdityaToff.jpg",
     "pronunciation": "/uh-dit-yuh/",
-    "audioFile": "/assets/name-pro.m4a",
+    "audioFile": "assets/name-pro.m4a",
     "cssVarPrefix": "hp",
     "email": "aditrajsingh10@gmail.com",
     "linkedin": "https://www.linkedin.com/in/adityasingh1010/",
