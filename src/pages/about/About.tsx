@@ -57,7 +57,7 @@ export const About: FC = () => {
                 mt="16"
                 justifyContent="space-between"
             >
-                <Box flex="0.6" flexShrink="0" overflow="hidden">
+                <Box flex="0.6" flexShrink={0} overflow="hidden">
                     <Education />
                 </Box>
                 <Box flex="0.6" overflow="hidden">

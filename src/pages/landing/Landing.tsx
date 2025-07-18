@@ -20,7 +20,7 @@ export const Landing: FC = () => {
 
     return (
         <Box id="page-landing">
-            <Center pb={{ base: 16, md: 32 }}>
+            <Center pb={{ base: 8, md: 12 }}>
                 <HStack spacing="16" justifyContent="space-between" alignItems="flex-start">
                     <Stack flex={{ base: "1", lg: "0.6" }} spacing="16">
                         <Stack spacing="8">

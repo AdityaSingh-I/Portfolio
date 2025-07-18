@@ -7,7 +7,7 @@
     "mainPicture": "/assets/AdityaToff.webp",
     "mainPictureJPG": "/assets/AdityaToff.jpg",
     "pronunciation": "/uh-dit-yuh/",
-    "audioFile": "/assets/name-pro.mp3",
+    "audioFile": "/assets/name-pro.m4a",
     "cssVarPrefix": "hp",
     "email": "aditrajsingh10@gmail.com",
     "linkedin": "https://www.linkedin.com/in/adityasingh1010/",
@@ -21,6 +21,10 @@
         {
             "type": "github",
             "link": "https://github.com/AdityaSingh-I"
+        },
+        {
+            "type": "instagram",
+            "link": "https://www.instagram.com/adityaa7/"
         },
         {
             "type": "mail",
