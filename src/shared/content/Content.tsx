@@ -29,18 +29,31 @@ export enum MarkdownFile {
     About = "about",
 }
 
-const Mapper = {
-    [MarkdownFile.Landing]: process.env.PUBLIC_URL + '/landing.md',
-    [MarkdownFile.About]: process.env.PUBLIC_URL + '/about.md',
+const contentData = {
+    [MarkdownFile.Landing]: `Welcome 👋 I'm Adi, a Senior Analyst in the Insights and Solutions team at Liberty Mutual, specializing in data analytics, business insights, and strategy. I have a Master's in Business Analytics from Babson College and a passion for leveraging data-driven insights to optimize business performance and decision-making.
+
+I'm currently working with:
+
+-   Tableau
+-   SQL
+-   Python
+-   R
+-   PowerBI
+-   Snowflake`,
+    [MarkdownFile.About]: `Hi there ✌️ nice to meet you! I'm **Aditya Jit Singh**, a _Business Intelligence Engineer & Analytics Professional_ currently working at **Liberty Mutual** in Seattle.
+
+I have a deep passion for **data, analytics, and storytelling**, blending my expertise in **SQL, Python, and visualization tools like Power BI & Tableau** to uncover insights that drive big decisions. Whether it's optimizing business strategy or running A/B tests, I thrive on turning raw numbers into **actionable insights** (kind of like magic, but with data instead of a wand 🪄).
+
+Beyond work, I am a **foodie on a mission**—always hunting down the best restaurants, and if there's sushi involved, I'm **already there** 🍣. My **dog, Toffee**, keeps me on my toes, ensuring my life isn't all just SQL queries and dashboards. When I'm not analyzing data or chasing Toffee around, you'll find me **traveling, lifting at the gym, exploring new cities, and always looking for bigger and better opportunities.**
+
+Oh, and if you ever want to talk about **business, tech, or real estate investing**, I'm your guy! 🚀`,
 };
 
 export const useContent = (fileName: MarkdownFile) => {
     const [data, setData] = useState<State>({ landing: "", about: "" });
 
     useEffect(() => {
-        fetch(Mapper[fileName])
-            .then((res) => res.text())
-            .then((text) => setData((data) => ({ ...data, [fileName]: text })));
+        setData((data) => ({ ...data, [fileName]: contentData[fileName] }));
     }, [fileName]);
 
     return data;
