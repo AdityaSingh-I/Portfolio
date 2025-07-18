@@ -9,7 +9,8 @@ import featuredProjects from "content/featured-projects/featured-projects-config
 import otherProjects from "content/other-projects/other-projects-config.json";
 import about from "content/about/about-config.json";
 
-
+import LandingMd from "content/landing/landing.md";
+import AboutMd from "content/about/about.md";
 
 export const configs = {
     common,
@@ -29,31 +30,18 @@ export enum MarkdownFile {
     About = "about",
 }
 
-const contentData = {
-    [MarkdownFile.Landing]: `Welcome 👋 I'm Adi, a Senior Analyst in the Insights and Solutions team at Liberty Mutual, specializing in data analytics, business insights, and strategy. I have a Master's in Business Analytics from Babson College and a passion for leveraging data-driven insights to optimize business performance and decision-making.
-
-I'm currently working with:
-
--   Tableau
--   SQL
--   Python
--   R
--   PowerBI
--   Snowflake`,
-    [MarkdownFile.About]: `Hi there ✌️ nice to meet you! I'm **Aditya Jit Singh**, a _Business Intelligence Engineer & Analytics Professional_ currently working at **Liberty Mutual** in Seattle.
-
-I have a deep passion for **data, analytics, and storytelling**, blending my expertise in **SQL, Python, and visualization tools like Power BI & Tableau** to uncover insights that drive big decisions. Whether it's optimizing business strategy or running A/B tests, I thrive on turning raw numbers into **actionable insights** (kind of like magic, but with data instead of a wand 🪄).
-
-Beyond work, I am a **foodie on a mission**—always hunting down the best restaurants, and if there's sushi involved, I'm **already there** 🍣. My **dog, Toffee**, keeps me on my toes, ensuring my life isn't all just SQL queries and dashboards. When I'm not analyzing data or chasing Toffee around, you'll find me **traveling, lifting at the gym, exploring new cities, and always looking for bigger and better opportunities.**
-
-Oh, and if you ever want to talk about **business, tech, or real estate investing**, I'm your guy! 🚀`,
+const Mapper = {
+    [MarkdownFile.Landing]: LandingMd,
+    [MarkdownFile.About]: AboutMd,
 };
 
 export const useContent = (fileName: MarkdownFile) => {
     const [data, setData] = useState<State>({ landing: "", about: "" });
 
     useEffect(() => {
-        setData((data) => ({ ...data, [fileName]: contentData[fileName] }));
+        fetch(Mapper[fileName])
+            .then((res) => res.text())
+            .then((text) => setData((data) => ({ ...data, [fileName]: text })));
     }, [fileName]);
 
     return data;
@@ -73,11 +61,11 @@ export const Content: FC<Props> = ({ children, ...rest }) => {
                         <Link href={props.href} target="_blank" color="primary.200" {...props} />
                     ),
                     ul: ({ node, ...props }) => {
-                        const { ordered, ...ulProps } = props;
+                        const { ordered, ...rest } = props;
 
                         return (
                             <UnorderedList
-                                {...ulProps}
+                                {...rest}
                                 data-aos="fade"
                                 listStylePosition="inside"
                                 display="grid"
