@@ -2,7 +2,7 @@
   "name": "portfolio-3",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://AdityaSingh-I.github.io/portfolio",
+  "homepage": "https://AdityaSingh-I.github.io/adityajitsingh-portfolio",
   "dependencies": {
     "@chakra-ui/react": "^1.8.3",
     "@emotion/react": "^11",
