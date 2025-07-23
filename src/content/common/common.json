@@ -29,6 +29,10 @@
         {
             "type": "mail",
             "link": "mailto:aditrajsingh10@gmail.com"
+        },
+        {
+            "type": "tableau",
+            "link": "https://adityasingh-i.github.io/Tabluea/"
         }
     ]
 }

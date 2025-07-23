@@ -4,7 +4,7 @@ import { Button, HStack, IconButton, Tooltip } from "@chakra-ui/react";
 
 import { configs } from "shared/content/Content";
 import { onResumeOpen, open } from "utils/Functions";
-import { FacebookIcon, GitHubIcon, InstagramIcon, LinkedInIcon, MailIcon, YoutubeIcon } from "utils/Icons";
+import { FacebookIcon, GitHubIcon, InstagramIcon, LinkedInIcon, MailIcon, TableauIcon, YoutubeIcon } from "utils/Icons";
 
 const LinksToIconMapper: Record<string, JSX.Element> = {
     linkedin: <LinkedInIcon />,
@@ -13,6 +13,7 @@ const LinksToIconMapper: Record<string, JSX.Element> = {
     instagram: <InstagramIcon />,
     youtube: <YoutubeIcon />,
     mail: <MailIcon />,
+    tableau: <TableauIcon />,
 };
 
 interface Props {

@@ -12,6 +12,9 @@ const headerStyles = {
     transition: "color 0.2s ease-in-out",
     isTruncated: true,
     fontSize: { base: "2xl", md: "3xl" },
+    fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    fontWeight: "600",
+    letterSpacing: "0.5px",
     _hover: { color: "primary.500" },
     _active: { color: "primary.500" },
 };
@@ -33,7 +36,7 @@ export const Footer: FC = () => {
             </Box>
             <Flex
                 pt="4"
-                pb="2"
+                pb="8"
                 fontSize="sm"
                 color="gray.500"
                 justifyContent={{ base: "center", md: "space-between" }}
